@@ -50,4 +50,12 @@ digital-nature-dismissable-message {
 }
 ```
 
+and the HTML to use the `success` message type:
+```html
+<!-- other classes are `info`, `warning`, and `error` -->
+<digital-nature-dismissable-message class="success">
+    <slot name="message">This is a success message.</slot>
+</digital-nature-dismissable-message>
+```
+
 
