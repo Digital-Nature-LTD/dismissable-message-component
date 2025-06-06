@@ -6,7 +6,7 @@ export default class DigitalNatureDismissableMessageComponent extends DigitalNat
     static tagName = 'digital-nature-dismissable-message';
 
     constructor(options = {}) {
-        super({...options, template: template});
+        super({template: template, ...options});
 
         this.addEventListener("click", this);
     }
