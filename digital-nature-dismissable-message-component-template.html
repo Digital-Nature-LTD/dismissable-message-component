@@ -38,34 +38,36 @@
         --default-image-background-url: unset;
         --default-image-background-repeat: no-repeat;
         --default-image-background-position: center center;
+        --default-border-colour: #000;
+        --default-font-colour: #000;
 
         --success-image-background-colour: var(--default-image-background-colour);
         --success-image-background-url: var(--default-image-background-url);
         --success-image-background-repeat: var(--default-image-background-repeat);
         --success-image-background-position: var(--default-image-background-position);
-        --success-border-colour: #000;
-        --success-font-colour: #000;
+        --success-border-colour: var(--default-border-colour);
+        --success-font-colour: var(--default-font-colour);
 
         --error-image-background-colour: var(--default-image-background-colour);
         --error-image-background-url: var(--default-image-background-url);
         --error-image-background-repeat: var(--default-image-background-repeat);
         --error-image-background-position: var(--default-image-background-position);
-        --error-border-colour: #000;
-        --error-font-colour: #000;
+        --error-border-colour: var(--default-border-colour);
+        --error-font-colour: var(--default-font-colour);
 
         --warning-image-background-colour: var(--default-image-background-colour);
         --warning-image-background-url: var(--default-image-background-url);
         --warning-image-background-repeat: var(--default-image-background-repeat);
         --warning-image-background-position: var(--default-image-background-position);
-        --warning-border-colour: #000;
-        --warning-font-colour: #000;
+        --warning-border-colour: var(--default-border-colour);
+        --warning-font-colour: var(--default-font-colour);
 
         --info-image-background-colour: var(--default-image-background-colour);
         --info-image-background-url: var(--default-image-background-url);
         --info-image-background-repeat: var(--default-image-background-repeat);
         --info-image-background-position: var(--default-image-background-position);
-        --info-border-colour: #000;
-        --info-font-colour: #000;
+        --info-border-colour: var(--default-border-colour);
+        --info-font-colour: var(--default-font-colour);
 
         display: grid;
         grid-template-columns: var(--message-grid-size);
@@ -80,7 +82,7 @@
         font-size: var(--message-font-size);
         border: var(--message-border-width) var(--message-border-style) var(--message-border-colour);
         border-radius: var(--message-border-radius);
-        color: var(--success-font-colour);
+        color: var(--default-font-colour);
         padding: 0;
         overflow: hidden;
         margin: var(--message-margin);
@@ -93,11 +95,21 @@
             aspect-ratio: 1 / 1;
             height: calc(100% - (2 * var(--message-border-width)));
             max-width: 100%;
-            background: var(--success-image-background-colour) var(--success-image-background-url) var(--success-image-background-repeat) var(--success-image-background-position);
+            background: var(--default-image-background-colour) var(--default-image-background-url) var(--default-image-background-repeat) var(--default-image-background-position);
             background-size: 1em;
-            border: var(--message-border-width) solid var(--success-border-colour);
+            border: var(--message-border-width) solid var(--default-border-colour);
             border-radius: var(--message-border-radius);
         }
+
+        &.success {
+            border-color: var(--success-border-colour);
+            color: var(--success-font-colour);
+
+            &:before {
+                background: var(--success-image-background-colour) var(--success-image-background-url) var(--success-image-background-repeat) var(--success-image-background-position);
+            }
+        }
+
 
         &.error {
             border-color: var(--error-border-colour);

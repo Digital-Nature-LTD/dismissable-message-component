@@ -33,3 +33,21 @@ You can add a custom button to the dismissable message by using the `button` slo
 </digital-nature-dismissable-message>
 ```
 
+### Custom styles
+The component supports custom styles using css variable, the full list of variables and their default values can be found in the source code of the component.
+
+There are four main message types: `info`, `warning`, `error`, and `success`. Each type has its own set of CSS variables that can be customised.
+
+The example below shows how to set the success message styles.
+```css
+digital-nature-dismissable-message {
+    --success-image-background-colour: green;
+    --success-image-background-url: url('path/to/success-image.png');
+    --success-image-background-repeat: no-repeat;
+    --success-image-background-position: center center;
+    --success-border-colour: green;
+    --success-font-colour: green;
+}
+```
+
+
