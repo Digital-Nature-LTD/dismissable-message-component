@@ -1,0 +1,74 @@
+<div class="message-container" title="Click to dismiss this message">
+    <slot name="message"></slot>
+</div>
+<slot name="dismiss-button">
+    <button></button>
+</slot>
+
+
+
+
+
+
+
+<style>
+    :host {
+        display: grid;
+        grid-template-columns: 3rem auto 30px;
+        grid-template-rows: auto;
+        grid-template-areas: "icon message close";
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            grid-area: icon;
+            content: "";
+            display: block;
+            aspect-ratio: 1 / 1;
+            background: #000000;
+            height: calc(100% - 4px);
+            max-width: 100%;
+            border: 2px solid #FFFFFF;
+        }
+    }
+
+    :host(:hover) {
+        slot[name="dismiss-button"] {
+            button {
+                opacity: 1;
+            }
+        }
+    }
+
+    .message-container {
+        padding: 1rem 0;
+        grid-area: message;
+    }
+
+    slot[name="dismiss-button"] {
+        grid-area: close;
+
+        &:hover {
+            button {
+                opacity: 1;
+            }
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-size: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            background: var(--background-colour, white);
+            background-image: var(--background-image);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px;
+            opacity: 0.5;
+        }
+    }
+</style>

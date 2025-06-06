@@ -1,0 +1,19 @@
+{
+  "name": "@digital-nature-ltd/dismissable-message-component",
+  "version": "0.0.1",
+  "description": "A dismissable message web component",
+  "main": "digital-nature-dismissable-message-component.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digital-Nature-LTD/dismissable-message-component"
+  },
+  "homepage": "https://www.digital-nature.co.uk",
+  "author": "Digital Nature LTD",
+  "license": "MIT",
+  "dependencies": {
+    "@digital-nature-ltd/web-component": "^1.0.4"
+  }
+}
