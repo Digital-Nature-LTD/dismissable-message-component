@@ -41,34 +41,6 @@
         --default-border-colour: #000;
         --default-font-colour: #000;
 
-        --success-image-background-colour: var(--default-image-background-colour);
-        --success-image-background-url: var(--default-image-background-url);
-        --success-image-background-repeat: var(--default-image-background-repeat);
-        --success-image-background-position: var(--default-image-background-position);
-        --success-border-colour: var(--default-border-colour);
-        --success-font-colour: var(--default-font-colour);
-
-        --error-image-background-colour: var(--default-image-background-colour);
-        --error-image-background-url: var(--default-image-background-url);
-        --error-image-background-repeat: var(--default-image-background-repeat);
-        --error-image-background-position: var(--default-image-background-position);
-        --error-border-colour: var(--default-border-colour);
-        --error-font-colour: var(--default-font-colour);
-
-        --warning-image-background-colour: var(--default-image-background-colour);
-        --warning-image-background-url: var(--default-image-background-url);
-        --warning-image-background-repeat: var(--default-image-background-repeat);
-        --warning-image-background-position: var(--default-image-background-position);
-        --warning-border-colour: var(--default-border-colour);
-        --warning-font-colour: var(--default-font-colour);
-
-        --info-image-background-colour: var(--default-image-background-colour);
-        --info-image-background-url: var(--default-image-background-url);
-        --info-image-background-repeat: var(--default-image-background-repeat);
-        --info-image-background-position: var(--default-image-background-position);
-        --info-border-colour: var(--default-border-colour);
-        --info-font-colour: var(--default-font-colour);
-
         display: grid;
         grid-template-columns: var(--message-grid-size);
         grid-template-rows: var(--message-grid-rows);
@@ -100,51 +72,50 @@
             border: var(--message-border-width) solid var(--default-border-colour);
             border-radius: var(--message-border-radius);
         }
-
-        &.success {
-            border-color: var(--success-border-colour);
-            color: var(--success-font-colour);
-
-            &:before {
-                background: var(--success-image-background-colour) var(--success-image-background-url) var(--success-image-background-repeat) var(--success-image-background-position);
-            }
-        }
-
-
-        &.error {
-            border-color: var(--error-border-colour);
-            color: var(--error-font-colour);
-
-            &:before {
-                background: var(--error-image-background-colour) var(--error-image-background-url) var(--error-image-background-repeat) var(--error-image-background-position);
-            }
-        }
-
-        &.warning {
-            border-color: var(--warning-border-colour);
-            color: var(--warning-font-colour);
-
-            &:before {
-                background: var(--warning-image-background-colour) var(--warning-image-background-url) var(--warning-image-background-repeat) var(--warning-image-background-position);
-            }
-        }
-
-        &.info {
-            border-color: var(--info-border-colour);
-            color: var(--info-font-colour);
-
-            &:before {
-                background: var(--info-image-background-colour) var(--info-image-background-url) var(--info-image-background-repeat) var(--info-image-background-position);
-            }
-        }
     }
-
 
     :host(:hover) {
         slot[name="dismiss-button"] {
             button {
                 opacity: 1;
             }
+        }
+    }
+
+    :host(.success) {
+        border-color: var(--success-border-colour, var(--default-border-colour));
+        color: var(--success-font-colour, var(--default-font-colour));
+
+        &:before {
+            background: var(--success-image-background-colour, var(--default-image-background-colour)) var(--success-image-background-url, var(--default-image-background-url)) var(--success-image-background-repeat, var(--default-image-background-repeat)) var(--success-image-background-position, var(--default-image-background-position));
+        }
+    }
+
+
+    :host(.error) {
+        border-color: var(--error-border-colour, var(--default-border-colour));
+        color: var(--error-font-colour, var(--default-font-colour));
+
+        &:before {
+            background: var(--error-image-background-colour, var(--default-image-background-colour)) var(--error-image-background-url, var(--default-image-background-url)) var(--error-image-background-repeat, var(--default-image-background-repeat)) var(--error-image-background-position, var(--default-image-background-position));
+        }
+    }
+
+    :host(.warning) {
+        border-color: var(--warning-border-colour, var(--default-border-colour));
+        color: var(--warning-font-colour, var(--default-font-colour));
+
+        &:before {
+            background: var(--warning-image-background-colour, var(--default-image-background-colour)) var(--warning-image-background-url, var(--default-image-background-url)) var(--warning-image-background-repeat, var(--default-image-background-repeat)) var(--warning-image-background-position, var(--default-image-background-position));
+        }
+    }
+
+    :host(.info) {
+        border-color: var(--info-border-colour, var(--default-border-colour));
+        color: var(--info-font-colour, var(--default-font-colour));
+
+        &:before {
+            background: var(--info-image-background-colour, var(--default-image-background-colour)) var(--info-image-background-url, var(--default-image-background-url)) var(--info-image-background-repeat, var(--default-image-background-repeat)) var(--info-image-background-position, var(--default-image-background-position));
         }
     }
 
