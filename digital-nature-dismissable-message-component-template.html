@@ -38,6 +38,7 @@
         --default-image-background-url: unset;
         --default-image-background-repeat: no-repeat;
         --default-image-background-position: center center;
+        --default-image-background-size: auto;
         --default-border-colour: #000;
         --default-font-colour: #000;
 
@@ -67,7 +68,10 @@
             aspect-ratio: 1 / 1;
             height: calc(100% - (2 * var(--message-border-width)));
             max-width: 100%;
-            background: var(--default-image-background-colour) var(--default-image-background-url) var(--default-image-background-repeat) var(--default-image-background-position);
+            background-color: var(--default-image-background-colour);
+            background-image: var(--default-image-background-url);
+            background-repeat: var(--default-image-background-repeat);
+            background-position: var(--default-image-background-position);
             background-size: 1em;
             border: var(--message-border-width) solid var(--default-border-colour);
             border-radius: var(--message-border-radius);
@@ -87,7 +91,11 @@
         color: var(--success-font-colour, var(--default-font-colour));
 
         &:before {
-            background: var(--success-image-background-colour, var(--default-image-background-colour)) var(--success-image-background-url, var(--default-image-background-url)) var(--success-image-background-repeat, var(--default-image-background-repeat)) var(--success-image-background-position, var(--default-image-background-position));
+            background-color: var(--success-image-background-colour, var(--default-image-background-colour));
+            background-image: var(--success-image-background-url, var(--default-image-background-url));
+            background-repeat: var(--success-image-background-repeat, var(--default-image-background-repeat));
+            background-position: var(--success-image-background-position, var(--default-image-background-position));
+            background-size: var(--success-image-background-size, var(--default-image-background-size));
         }
     }
 
@@ -97,7 +105,11 @@
         color: var(--error-font-colour, var(--default-font-colour));
 
         &:before {
-            background: var(--error-image-background-colour, var(--default-image-background-colour)) var(--error-image-background-url, var(--default-image-background-url)) var(--error-image-background-repeat, var(--default-image-background-repeat)) var(--error-image-background-position, var(--default-image-background-position));
+            background-color: var(--error-image-background-colour, var(--default-image-background-colour));
+            background-image: var(--error-image-background-url, var(--default-image-background-url));
+            background-repeat: var(--error-image-background-repeat, var(--default-image-background-repeat));
+            background-position: var(--error-image-background-position, var(--default-image-background-position));
+            background-size: var(--error-image-background-size, var(--default-image-background-size));
         }
     }
 
@@ -106,7 +118,11 @@
         color: var(--warning-font-colour, var(--default-font-colour));
 
         &:before {
-            background: var(--warning-image-background-colour, var(--default-image-background-colour)) var(--warning-image-background-url, var(--default-image-background-url)) var(--warning-image-background-repeat, var(--default-image-background-repeat)) var(--warning-image-background-position, var(--default-image-background-position));
+            background-color: var(--warning-image-background-colour, var(--default-image-background-colour));
+            background-image: var(--warning-image-background-url, var(--default-image-background-url));
+            background-repeat: var(--warning-image-background-repeat, var(--default-image-background-repeat));
+            background-position: var(--warning-image-background-position, var(--default-image-background-position));
+            background-size: var(--warning-image-background-size, var(--default-image-background-size));
         }
     }
 
@@ -115,7 +131,11 @@
         color: var(--info-font-colour, var(--default-font-colour));
 
         &:before {
-            background: var(--info-image-background-colour, var(--default-image-background-colour)) var(--info-image-background-url, var(--default-image-background-url)) var(--info-image-background-repeat, var(--default-image-background-repeat)) var(--info-image-background-position, var(--default-image-background-position));
+            background-color: var(--info-image-background-colour, var(--default-image-background-colour));
+            background-image: var(--info-image-background-url, var(--default-image-background-url));
+            background-repeat: var(--info-image-background-repeat, var(--default-image-background-repeat));
+            background-position: var(--info-image-background-position, var(--default-image-background-position));
+            background-size: var(--info-image-background-size, var(--default-image-background-size));
         }
     }
 

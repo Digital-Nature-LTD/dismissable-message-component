@@ -43,6 +43,7 @@ digital-nature-dismissable-message {
     --success-image-background-url: url('path/to/success-image.png');
     --success-image-background-repeat: no-repeat;
     --success-image-background-position: center center;
+    --success-image-background-size: 1rem;
     --success-border-colour: green;
     --success-font-colour: green;
 }
