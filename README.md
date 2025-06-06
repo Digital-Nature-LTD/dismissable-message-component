@@ -18,7 +18,7 @@ Use the message slot to add a message to the dismissable message component.
 ```html
 <!-- html file -->
 <digital-nature-dismissable-message>
-    <slot name="message">This is a dismissable message.</slot>
+    <p slot="message">This is a dismissable message.</p>
 </digital-nature-dismissable-message>
 ```
 
@@ -26,10 +26,8 @@ Use the message slot to add a message to the dismissable message component.
 You can add a custom button to the dismissable message by using the `button` slot.
 ```html
 <digital-nature-dismissable-message>
-    <slot name="message">This is a dismissable message.</slot>
-    <slot name="button">
-        <button class="custom-button">Custom Button</button>
-    </slot>
+    <p slot="message">This is a dismissable message.</p>
+    <button slot="button" class="custom-button">Custom Button</button>
 </digital-nature-dismissable-message>
 ```
 
@@ -54,7 +52,7 @@ and the HTML to use the `success` message type:
 ```html
 <!-- other classes are `info`, `warning`, and `error` -->
 <digital-nature-dismissable-message class="success">
-    <slot name="message">This is a success message.</slot>
+    <p slot="message">This is a success message.</p>
 </digital-nature-dismissable-message>
 ```
 
