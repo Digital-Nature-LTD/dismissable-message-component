@@ -13,31 +13,120 @@
 
 <style>
     :host {
-        --button-background-colour: white;
-        --button-background-image: unset;
+        --message-background-colour: #FFF;
+        --message-border-colour: #000;
+        --message-border-radius: 0.5rem;
+        --message-border-width: 2px;
+        --message-border-style: solid;
+        --message-font-weight: 400;
+        --message-margin: 1rem 0;
+        --message-grid-size: 3rem auto 30px;
+        --message-grid-rows: auto;
+        --message-grid-areas: "icon message close";
+        --message-grid-areas-gap: 1rem;
+        --message-cursor: pointer;
+        --message-font-size: 1rem;
+
+        --button-background-colour: #FFF;
         --button-background-size: 20px;
-        --message-before-background-colour: #000000;
+        --button-image-background-url: url(assets/img/close.svg);
+        --button-image-background-repeat: no-repeat;
+        --button-image-background-position: center center;
+        --button-opacity: 0.5;
+
+        --default-image-background-colour: #000;
+        --default-image-background-url: unset;
+        --default-image-background-repeat: no-repeat;
+        --default-image-background-position: center center;
+
+        --success-image-background-colour: var(--default-image-background-colour);
+        --success-image-background-url: var(--default-image-background-url);
+        --success-image-background-repeat: var(--default-image-background-repeat);
+        --success-image-background-position: var(--default-image-background-position);
+        --success-border-colour: #000;
+        --success-font-colour: #000;
+
+        --error-image-background-colour: var(--default-image-background-colour);
+        --error-image-background-url: var(--default-image-background-url);
+        --error-image-background-repeat: var(--default-image-background-repeat);
+        --error-image-background-position: var(--default-image-background-position);
+        --error-border-colour: #000;
+        --error-font-colour: #000;
+
+        --warning-image-background-colour: var(--default-image-background-colour);
+        --warning-image-background-url: var(--default-image-background-url);
+        --warning-image-background-repeat: var(--default-image-background-repeat);
+        --warning-image-background-position: var(--default-image-background-position);
+        --warning-border-colour: #000;
+        --warning-font-colour: #000;
+
+        --info-image-background-colour: var(--default-image-background-colour);
+        --info-image-background-url: var(--default-image-background-url);
+        --info-image-background-repeat: var(--default-image-background-repeat);
+        --info-image-background-position: var(--default-image-background-position);
+        --info-border-colour: #000;
+        --info-font-colour: #000;
 
         display: grid;
-        grid-template-columns: 3rem auto 30px;
-        grid-template-rows: auto;
-        grid-template-areas: "icon message close";
+        grid-template-columns: var(--message-grid-size);
+        grid-template-rows: var(--message-grid-rows);
+        grid-template-areas: var(--message-grid-areas);
         align-items: center;
-        gap: 1rem;
+        gap: var(--message-grid-areas-gap);
         position: relative;
-        cursor: pointer;
+        cursor: var(--message-cursor);
+
+        background: var(--message-background-colour);
+        font-size: var(--message-font-size);
+        border: var(--message-border-width) var(--message-border-style) var(--message-border-colour);
+        border-radius: var(--message-border-radius);
+        color: var(--success-font-colour);
+        padding: 0;
+        overflow: hidden;
+        margin: var(--message-margin);
+        font-weight: var(--message-font-weight);
 
         &:before {
             grid-area: icon;
             content: "";
             display: block;
             aspect-ratio: 1 / 1;
-            background: var(--message-before-background-colour);
-            height: calc(100% - 4px);
+            height: calc(100% - (2 * var(--message-border-width)));
             max-width: 100%;
-            border: 2px solid #FFFFFF;
+            background: var(--success-image-background-colour) var(--success-image-background-url) var(--success-image-background-repeat) var(--success-image-background-position);
+            background-size: 1em;
+            border: var(--message-border-width) solid var(--success-border-colour);
+            border-radius: var(--message-border-radius);
+        }
+
+        &.error {
+            border-color: var(--error-border-colour);
+            color: var(--error-font-colour);
+
+            &:before {
+                background: var(--error-image-background-colour) var(--error-image-background-url) var(--error-image-background-repeat) var(--error-image-background-position);
+            }
+        }
+
+        &.warning {
+            border-color: var(--warning-border-colour);
+            color: var(--warning-font-colour);
+
+            &:before {
+                background: var(--warning-image-background-colour) var(--warning-image-background-url) var(--warning-image-background-repeat) var(--warning-image-background-position);
+            }
+        }
+
+        &.info {
+            border-color: var(--info-border-colour);
+            color: var(--info-font-colour);
+
+            &:before {
+                background: var(--info-image-background-colour) var(--info-image-background-url) var(--info-image-background-repeat) var(--info-image-background-position);
+            }
         }
     }
+
 
     :host(:hover) {
         slot[name="dismiss-button"] {
@@ -69,11 +158,12 @@
             height: 100%;
             padding: 0;
             background: var(--button-background-colour);
-            background-image: var(--button-background-image);
-            background-repeat: no-repeat;
-            background-position: center center;
+            background-image: var(--button-image-background-url);
+            background-repeat: var(--button-image-background-repeat);
+            background-position: var(--button-image-background-position);
             background-size: var(--button-background-size);
-            opacity: 0.5;
+            opacity: var(--button-opacity);
         }
     }
+
 </style>
