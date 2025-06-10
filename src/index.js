@@ -1,7 +1,5 @@
 import DigitalNatureWebComponent from "@digital-nature-ltd/web-component";
-import template from './digital-nature-dismissable-message-component-template.html?raw';
-
-console.log("DigitalNatureDismissableMessageComponent");
+import template from './template.html?raw';
 
 export default class DigitalNatureDismissableMessageComponent extends DigitalNatureWebComponent
 {
@@ -18,8 +16,6 @@ export default class DigitalNatureDismissableMessageComponent extends DigitalNat
         this.remove();
     }
 }
-
-console.log("DigitalNatureDismissableMessageComponent adding to registry");
 
 // add the custom element to the registry
 customElements.define(DigitalNatureDismissableMessageComponent.tagName, DigitalNatureDismissableMessageComponent);

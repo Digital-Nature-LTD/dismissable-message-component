@@ -1,34 +1,24 @@
-import path from "path";
 import { defineConfig } from "vite";
 import livePreview from 'vite-live-preview'
 
-export default defineConfig({
+export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => ({
     base: "",
     plugins: [
         livePreview({}),
     ],
     preview: {},
     build: {
-        assetsInlineLimit: Infinity, // inline css images
         sourcemap: true,
         lib: {
-            entry: path.resolve(__dirname, "src/index.js"),
+            entry: "src/index.js",
             name: "dn_dismissable_message_component",
             formats: ["es", "cjs", "umd", "iife"],
             fileName: (format) => `index.${format}.js`,
         },
-        rollupOptions: {
+        rollupOptions: mode === 'development' ? {
             input: {
                 'index.html': 'index.html',
             },
-        },
-        // rollupOptions: {
-        //     external: [],
-        //     output: {
-        //         globals: {
-        //
-        //         },
-        //     },
-        // },
+        } : {},
     },
-});
+}));
