@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import livePreview from 'vite-live-preview'
 
-export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => ({
+export default defineConfig(({ mode }) => ({
     base: "",
     plugins: [
         livePreview({}),
