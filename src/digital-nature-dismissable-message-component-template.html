@@ -15,17 +15,18 @@
     :host {
         --message-background-colour: #FFF;
         --message-border-colour: #000;
-        --message-border-radius: 0.5rem;
+        --message-border-radius: 1rem;
         --message-border-width: 2px;
         --message-border-style: solid;
         --message-font-weight: 400;
         --message-margin: 1rem 0;
-        --message-grid-size: 3rem auto 30px;
+        --message-grid-size: 3rem auto 3rem;
         --message-grid-rows: auto;
         --message-grid-areas: "icon message close";
         --message-grid-areas-gap: 1rem;
         --message-cursor: pointer;
         --message-font-size: 1rem;
+        --message-padding: 0.5rem 0;
 
         --button-background-colour: #FFF;
         --button-background-size: 20px;
@@ -35,12 +36,13 @@
         --button-opacity: 0.5;
 
         --default-image-background-colour: #000;
-        --default-image-background-url: unset;
+        --default-image-background-url: url(/assets/img/digital-nature-logo.svg);
         --default-image-background-repeat: no-repeat;
         --default-image-background-position: center center;
-        --default-image-background-size: auto;
-        --default-border-colour: #FFF;
+        --default-image-background-size: 50%;
         --default-font-colour: #000;
+
+        --hover-top: 1px;
 
         display: grid;
         grid-template-columns: var(--message-grid-size);
@@ -79,6 +81,8 @@
     }
 
     :host(:hover) {
+        top: var(--hover-top);
+
         slot[name="dismiss-button"] {
             button {
                 opacity: 1;
@@ -87,7 +91,7 @@
     }
 
     :host(.success) {
-        border-color: var(--success-border-colour, var(--default-border-colour));
+        border-color: var(--success-border-colour, var(--message-border-colour));
         color: var(--success-font-colour, var(--default-font-colour));
 
         &:before {
@@ -101,7 +105,7 @@
 
 
     :host(.error) {
-        border-color: var(--error-border-colour, var(--default-border-colour));
+        border-color: var(--error-border-colour, var(--message-border-colour));
         color: var(--error-font-colour, var(--default-font-colour));
 
         &:before {
@@ -114,7 +118,7 @@
     }
 
     :host(.warning) {
-        border-color: var(--warning-border-colour, var(--default-border-colour));
+        border-color: var(--warning-border-colour, var(--message-border-colour));
         color: var(--warning-font-colour, var(--default-font-colour));
 
         &:before {
@@ -127,7 +131,7 @@
     }
 
     :host(.info) {
-        border-color: var(--info-border-colour, var(--default-border-colour));
+        border-color: var(--info-border-colour, var(--message-border-colour));
         color: var(--info-font-colour, var(--default-font-colour));
 
         &:before {
@@ -140,7 +144,7 @@
     }
 
     .message-container {
-        padding: 1rem 0;
+        padding: var(--message-padding);
         grid-area: message;
     }
 

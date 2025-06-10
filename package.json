@@ -28,6 +28,7 @@
   "devDependencies": {
     "glob": "^11.0.2",
     "path": "^0.12.7",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-live-preview": "^0.3.2"
   }
 }
