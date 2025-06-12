@@ -23,7 +23,7 @@
   "author": "Digital Nature LTD",
   "license": "MIT",
   "dependencies": {
-    "@digital-nature-ltd/web-component": "^1.0.5"
+    "@digital-nature-ltd/web-component": "^1.0.7"
   },
   "devDependencies": {
     "glob": "^11.0.2",

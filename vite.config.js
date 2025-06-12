@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     preview: {},
     build: {
         sourcemap: true,
+        assetsInlineLimit: Number.MAX_SAFE_INTEGER,
         lib: {
             entry: "src/index.js",
             name: "dn_dismissable_message_component",

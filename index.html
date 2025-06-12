@@ -16,35 +16,24 @@
                     --message-border-colour: #A83E32;
                     --message-font-colour: #A83E32;
                     --image-background-colour: #A83E32;
-                    --image-background-url: url(/assets/img/digital-nature-logo-light.svg);
+                    --image-background-url: url(public/assets/img/digital-nature-logo-light.svg);
                 }
 
                 &.warning {
                     --message-border-colour: #EBEFA6;
                     --message-font-colour: #254137;
                     --image-background-colour: #EBEFA6;
-                    --image-background-url: url(/assets/img/digital-nature-logo-dark.svg);
+                    --image-background-url: url(public/assets/img/digital-nature-logo-dark.svg);
                 }
 
                 &.info {
                     --message-border-colour: #ECE9E4;
                     --message-font-colour: #254137;
                     --image-background-colour: #ECE9E4;
-                    --image-background-url: url(/assets/img/digital-nature-logo-dark.svg);
+                    --image-background-url: url(public/assets/img/digital-nature-logo-dark.svg);
                 }
             }
         </style>
-
-        <script type="module">
-            import DigitalNatureDismissableMessageComponent from "./src/index.js";
-
-            let responseMessage = DigitalNatureDismissableMessageComponent.create({
-                'message': 'Success! Your event was sent to Klaviyo!',
-                'classes': ['success']
-            });
-
-            document.body.appendChild(responseMessage);
-        </script>
     </head>
     <body>
         <digital-nature-dismissable-message>

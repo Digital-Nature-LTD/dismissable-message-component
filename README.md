@@ -22,11 +22,12 @@ Use the message slot to add a message to the dismissable message component.
 </digital-nature-dismissable-message>
 ```
 
-Or using js you can create your component with message/styles in the configuration
+Or using js you can create your component with message/classes/adopted stylesheets in the configuration
 ```javascript
 let myMessage = DigitalNatureDismissableMessageComponent.create({
     'message': 'This was successful!',
-    'classes': ['success']
+    'classes': ['success'],
+    'stylesheets': [yourStylesheet, "div { color: red !important; }"]
 });
 ```
 
@@ -61,13 +62,13 @@ digital-nature-dismissable-message {
 
     --button-background-colour: #FFF;
     --button-background-size: 20px;
-    --button-image-background-url: url(/assets/img/close.svg);
+    --button-image-background-url: url(public/assets/img/close.svg);
     --button-image-background-repeat: no-repeat;
     --button-image-background-position: center center;
     --button-opacity: 0.5;
 
     --image-background-colour: #000;
-    --image-background-url: url(/assets/img/digital-nature-logo-primary.svg);
+    --image-background-url: url(public/assets/img/digital-nature-logo-primary.svg);
     --image-background-repeat: no-repeat;
     --image-background-position: center center;
     --image-background-size: 50%;
