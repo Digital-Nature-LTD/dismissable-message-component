@@ -90,59 +90,6 @@
         }
     }
 
-    :host(.success) {
-        border-color: var(--success-border-colour, var(--message-border-colour));
-        color: var(--success-font-colour, var(--default-font-colour));
-
-        &:before {
-            background-color: var(--success-image-background-colour, var(--default-image-background-colour));
-            background-image: var(--success-image-background-url, var(--default-image-background-url));
-            background-repeat: var(--success-image-background-repeat, var(--default-image-background-repeat));
-            background-position: var(--success-image-background-position, var(--default-image-background-position));
-            background-size: var(--success-image-background-size, var(--default-image-background-size));
-        }
-    }
-
-
-    :host(.error) {
-        border-color: var(--error-border-colour, var(--message-border-colour));
-        color: var(--error-font-colour, var(--default-font-colour));
-
-        &:before {
-            background-color: var(--error-image-background-colour, var(--default-image-background-colour));
-            background-image: var(--error-image-background-url, var(--default-image-background-url));
-            background-repeat: var(--error-image-background-repeat, var(--default-image-background-repeat));
-            background-position: var(--error-image-background-position, var(--default-image-background-position));
-            background-size: var(--error-image-background-size, var(--default-image-background-size));
-        }
-    }
-
-    :host(.warning) {
-        border-color: var(--warning-border-colour, var(--message-border-colour));
-        color: var(--warning-font-colour, var(--default-font-colour));
-
-        &:before {
-            background-color: var(--warning-image-background-colour, var(--default-image-background-colour));
-            background-image: var(--warning-image-background-url, var(--default-image-background-url));
-            background-repeat: var(--warning-image-background-repeat, var(--default-image-background-repeat));
-            background-position: var(--warning-image-background-position, var(--default-image-background-position));
-            background-size: var(--warning-image-background-size, var(--default-image-background-size));
-        }
-    }
-
-    :host(.info) {
-        border-color: var(--info-border-colour, var(--message-border-colour));
-        color: var(--info-font-colour, var(--default-font-colour));
-
-        &:before {
-            background-color: var(--info-image-background-colour, var(--default-image-background-colour));
-            background-image: var(--info-image-background-url, var(--default-image-background-url));
-            background-repeat: var(--info-image-background-repeat, var(--default-image-background-repeat));
-            background-position: var(--info-image-background-position, var(--default-image-background-position));
-            background-size: var(--info-image-background-size, var(--default-image-background-size));
-        }
-    }
-
     .message-container {
         padding: var(--message-padding);
         grid-area: message;

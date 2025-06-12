@@ -22,6 +22,14 @@ Use the message slot to add a message to the dismissable message component.
 </digital-nature-dismissable-message>
 ```
 
+Or using js you can create your component with message/styles in the configuration
+```javascript
+let myMessage = DigitalNatureDismissableMessageComponent.create({
+    'message': 'This was successful!',
+    'classes': ['success']
+});
+```
+
 ### Custom buttons
 You can add a custom button to the dismissable message by using the `button` slot.
 ```html
@@ -66,3 +74,20 @@ digital-nature-dismissable-message {
 }
 ```
 
+
+### Custom Template
+You can pass a custom template to the component by using the `template` property in the configuration object.
+
+The example below is the default template <i>excluding styles</i>. You can modify it to suit your needs.
+```javascript
+let myMessage = DigitalNatureDismissableMessageComponent.create({
+    'template': `
+        <div class="message-container" title="Click to dismiss this message">
+            <slot name="message"></slot>
+        </div>
+        <slot name="dismiss-button">
+            <button></button>
+        </slot>
+    `
+});
+```
