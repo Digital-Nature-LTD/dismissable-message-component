@@ -1,6 +1,5 @@
 import DigitalNatureWebComponent from "@digital-nature-ltd/web-component";
 import template from './template.html?raw';
-import './style.css';
 
 export default class DigitalNatureDismissableMessageComponent extends DigitalNatureWebComponent
 {
