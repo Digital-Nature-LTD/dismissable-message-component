@@ -25,6 +25,7 @@
         --message-grid-areas: "icon message close";
         --message-grid-areas-gap: 1rem;
         --message-cursor: pointer;
+        --message-font-colour: #000;
         --message-font-size: 1rem;
         --message-padding: 0.5rem 0;
 
@@ -35,12 +36,11 @@
         --button-image-background-position: center center;
         --button-opacity: 0.5;
 
-        --default-image-background-colour: #000;
-        --default-image-background-url: url(/assets/img/digital-nature-logo.svg);
-        --default-image-background-repeat: no-repeat;
-        --default-image-background-position: center center;
-        --default-image-background-size: 50%;
-        --default-font-colour: #000;
+        --image-background-colour: #000;
+        --image-background-url: url(/assets/img/digital-nature-logo-primary.svg);
+        --image-background-repeat: no-repeat;
+        --image-background-position: center center;
+        --image-background-size: 50%;
 
         --hover-top: 1px;
 
@@ -57,7 +57,7 @@
         font-size: var(--message-font-size);
         border: var(--message-border-width) var(--message-border-style) var(--message-border-colour);
         border-radius: var(--message-border-radius);
-        color: var(--default-font-colour);
+        color: var(--message-font-colour);
         padding: 0;
         overflow: hidden;
         margin: var(--message-margin);
@@ -70,11 +70,11 @@
             aspect-ratio: 1 / 1;
             height: calc(100% - (2 * var(--message-border-width)));
             max-width: 100%;
-            background-color: var(--default-image-background-colour);
-            background-image: var(--default-image-background-url);
-            background-repeat: var(--default-image-background-repeat);
-            background-position: var(--default-image-background-position);
-            background-size: var(--default-image-background-size);
+            background-color: var(--image-background-colour);
+            background-image: var(--image-background-url);
+            background-repeat: var(--image-background-repeat);
+            background-position: var(--image-background-position);
+            background-size: var(--image-background-size);
             border: var(--message-border-width) solid var(--message-background-colour);
             border-radius: var(--message-border-radius);
         }
