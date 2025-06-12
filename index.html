@@ -3,9 +3,50 @@
     <head>
         <script src="src/index.js" type="module"></script>
         <title>Module preview</title>
+
+        <style>
+            digital-nature-dismissable-message {
+                &.success {
+                    --message-border-colour: #254137;
+                    --message-font-colour: #254137;
+                    --image-background-colour: #254137;
+                }
+
+                &.error {
+                    --message-border-colour: #A83E32;
+                    --message-font-colour: #A83E32;
+                    --image-background-colour: #A83E32;
+                    --image-background-url: url(/assets/img/digital-nature-logo-light.svg);
+                }
+
+                &.warning {
+                    --message-border-colour: #EBEFA6;
+                    --message-font-colour: #254137;
+                    --image-background-colour: #EBEFA6;
+                    --image-background-url: url(/assets/img/digital-nature-logo-dark.svg);
+                }
+
+                &.info {
+                    --message-border-colour: #ECE9E4;
+                    --message-font-colour: #254137;
+                    --image-background-colour: #ECE9E4;
+                    --image-background-url: url(/assets/img/digital-nature-logo-dark.svg);
+                }
+            }
+        </style>
+
+        <script type="module">
+            import DigitalNatureDismissableMessageComponent from "./src/index.js";
+
+            let responseMessage = DigitalNatureDismissableMessageComponent.create({
+                'message': 'Success! Your event was sent to Klaviyo!',
+                'classes': ['success']
+            });
+
+            document.body.appendChild(responseMessage);
+        </script>
     </head>
     <body>
-
         <digital-nature-dismissable-message>
             <p slot="message">This is my test classless message</p>
         </digital-nature-dismissable-message>

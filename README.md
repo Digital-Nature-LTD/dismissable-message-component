@@ -32,29 +32,37 @@ You can add a custom button to the dismissable message by using the `button` slo
 ```
 
 ### Custom styles
-The component supports custom styles using css variable, the full list of variables and their default values can be found in the source code of the component.
-
-There are four main message types: `info`, `warning`, `error`, and `success`. Each type has its own set of CSS variables that can be customised.
-
-The example below shows how to set the success message styles.
+The component supports custom styles using css variable, the full list of variables and their default values are below.
 ```css
 digital-nature-dismissable-message {
-    --success-image-background-colour: green;
-    --success-image-background-url: url('path/to/success-image.png');
-    --success-image-background-repeat: no-repeat;
-    --success-image-background-position: center center;
-    --success-image-background-size: 1rem;
-    --success-border-colour: green;
-    --success-font-colour: green;
+    --message-background-colour: #FFF;
+    --message-border-colour: #000;
+    --message-border-radius: 1rem;
+    --message-border-width: 2px;
+    --message-border-style: solid;
+    --message-font-weight: 400;
+    --message-margin: 1rem 0;
+    --message-grid-size: 3rem auto 3rem;
+    --message-grid-rows: auto;
+    --message-grid-areas: "icon message close";
+    --message-grid-areas-gap: 1rem;
+    --message-cursor: pointer;
+    --message-font-colour: #000;
+    --message-font-size: 1rem;
+    --message-padding: 0.5rem 0;
+
+    --button-background-colour: #FFF;
+    --button-background-size: 20px;
+    --button-image-background-url: url(/assets/img/close.svg);
+    --button-image-background-repeat: no-repeat;
+    --button-image-background-position: center center;
+    --button-opacity: 0.5;
+
+    --image-background-colour: #000;
+    --image-background-url: url(/assets/img/digital-nature-logo-primary.svg);
+    --image-background-repeat: no-repeat;
+    --image-background-position: center center;
+    --image-background-size: 50%;
 }
 ```
-
-and the HTML to use the `success` message type:
-```html
-<!-- other classes are `info`, `warning`, and `error` -->
-<digital-nature-dismissable-message class="success">
-    <p slot="message">This is a success message.</p>
-</digital-nature-dismissable-message>
-```
-
 

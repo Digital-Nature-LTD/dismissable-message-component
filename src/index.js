@@ -9,6 +9,14 @@ export default class DigitalNatureDismissableMessageComponent extends DigitalNat
         super({template: template, ...options});
 
         this.addEventListener("click", this);
+
+        if (options.message) {
+            this.setSlotTextContent('message', options.message);
+        }
+
+        if (options.classes) {
+            options.classes.forEach(cls => this.classList.add(cls));
+        }
     }
 
     handleClick (event)
