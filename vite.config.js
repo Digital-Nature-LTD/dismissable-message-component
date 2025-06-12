@@ -1,10 +1,13 @@
 import { defineConfig } from "vite";
 import livePreview from 'vite-live-preview'
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig(({ mode }) => ({
     base: "",
     plugins: [
         livePreview({}),
+        libInjectCss()
+
     ],
     preview: {},
     build: {
