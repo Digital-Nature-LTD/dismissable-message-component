@@ -133,7 +133,7 @@ const isMain =
 
 if (isMain) {
     if (process.argv.length < 3) {
-        console.error('Usage: node inlinecss.js <directory>');
+        console.error('Usage: node inline-images.js <directory>');
         process.exit(1);
     }
     const htmlDir = process.argv[2];
