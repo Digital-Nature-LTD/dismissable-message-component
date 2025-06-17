@@ -3,6 +3,10 @@ This package contains a dismissable message web component.
 
 The component supports adding and removing of messages, and will rotate through the given messages in a loop.
 
+## Examples
+You can style the message with css variables, here are a few examples.
+![Image containing example messages](readme/example-dismissable-messages.png "Example messages with custom styling")
+
 
 ## Usage
 
