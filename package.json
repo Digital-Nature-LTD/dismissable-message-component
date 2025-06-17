@@ -13,6 +13,7 @@
     "watch": "vite build --watch --mode development",
     "build": "vite build",
     "preview": "vite preview",
+    "inline": "node cmd/inline-images.js src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
