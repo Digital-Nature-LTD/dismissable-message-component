@@ -1,12 +1,10 @@
 # Digital Nature - Dismissable Message Web Component
 This package contains a dismissable message web component.
 
-The component supports adding and removing of messages, and will rotate through the given messages in a loop.
+## How does it look on the page?
+You can customise the messages individually using css variables, the examples below each have a class applied, each class having the colours and images set in css variables.
 
-## Examples
-You can style the message with css variables, here are a few examples.
 ![Image containing example messages](readme/example-dismissable-messages.png "Example messages with custom styling")
-
 
 ## Usage
 
